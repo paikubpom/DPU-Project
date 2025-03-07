@@ -9,7 +9,6 @@ const Dashboard = () => {
       try {
         const response = await fetch(URL);
         const data = await response.json();
-        // console.log(data);
         setWeatherData({
           temperature: data.main.temp,
           description: data.weather[0].description,

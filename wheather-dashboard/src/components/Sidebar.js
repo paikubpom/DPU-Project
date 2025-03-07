@@ -1,6 +1,8 @@
 import "../Sidebar.css";
 
-function Sidebar() {
+// function Sidebar(props) {
+// Arrow function
+const Sidebar = (props) => {
   return (
     <div className="sidebar">
       <ul>
@@ -19,6 +21,6 @@ function Sidebar() {
       </ul>
     </div>
   );
-}
+};
 
 export default Sidebar;
