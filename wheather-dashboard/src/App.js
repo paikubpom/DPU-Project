@@ -5,7 +5,7 @@ import Dashboard from "./components/Dashboard";
 import Heading2 from "./components/Heading2";
 import "./Dashboard.css"
 
-const Cities = ["Bangkok", "London", "Tokyo", "Rome", "Beijing"];
+const Cities = ["Bangkok", "London", "Tokyo", "Beijing", "Paris"];
 
 function App() {
   return (
@@ -20,7 +20,7 @@ function App() {
                   <Dashboard city={city} />
                 </td>
               ))}
-            </tr>      
+            </tr>
         </table>
       </div>
     </div>
