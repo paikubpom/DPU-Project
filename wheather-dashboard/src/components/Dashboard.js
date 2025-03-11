@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from "react"
 
 const API_KEY = '44ebd3943bdec2f7872232e75ddc9721'
-const Dashboard = () => {
+
+const Dashboard = ({city}) => {
   const [weatherData, setWeatherData] = useState([]);
-  const URL = `https://api.openweathermap.org/data/2.5/weather?q=London&appid=${API_KEY}&units=metric`;
   useEffect(() => {
     const fetchWeather = async () => {
       try {
-        const response = await fetch(URL);
+        const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=metric`);
         const data = await response.json();
         setWeatherData({
           temperature: data.main.temp,
@@ -19,7 +19,7 @@ const Dashboard = () => {
       }
     };
     fetchWeather();
-  }, []);
+  }, [city]);
 
   return (
     <div className="dashboard">
