@@ -13,6 +13,7 @@ const Dashboard = ({city}) => {
           temperature: data.main.temp,
           description: data.weather[0].description,
           city: data.name,
+          humidity: data.main.humidity,
         });
       } catch (error) {
         console.error("Eror fetching weather data", error);
@@ -29,6 +30,7 @@ const Dashboard = ({city}) => {
           <>
             <p>City: {weatherData.city}</p>
             <p>Temperature: {weatherData.temperature}°C</p>
+            <p>Humidity: {weatherData.humidity}%</p>
             <p>Description: {weatherData.description}</p>
           </>
         ) : (
