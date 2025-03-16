@@ -29,7 +29,9 @@
     background-color: #575757;
 }
 
+@media screen and (min-width: 768px) {
 .main-content {
     margin-left: 200px;
     padding: 20px;
+}
 }
