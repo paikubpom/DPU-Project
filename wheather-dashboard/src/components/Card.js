@@ -2,15 +2,15 @@ import React, { useState } from "react";
 import Dashboard from "./Dashboard";
 
 const Card = (props) => {
-  const [city, setCity] = useState("");
-  const [searchCity, setSearchCity] = useState("");
+  const [city, setCity] = useState(""); // เก็บค่าชื่อเมือง
+  const [searchCity, setSearchCity] = useState(""); // เก็บค่าที่จะใช้ค้นหาจริง
 
   const handleChange = (event) => {
     setCity(event.target.value);
   };
 
   const handleSearch = () => {
-    setSearchCity(city);
+    setSearchCity(city); // อัปเดตค่า searchCity เท่านั้นเมื่อกดปุ่ม
   };
 
   return (
@@ -20,7 +20,7 @@ const Card = (props) => {
         placeholder="Enter city name"
         onChange={handleChange}
       />
-      <button type="button" onClick={handleSearch}>
+      <button type="button" onClick={handleSearch} > 
         Search
       </button>
       <Dashboard city={searchCity} />
